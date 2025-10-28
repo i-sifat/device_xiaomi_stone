@@ -21,9 +21,7 @@ import android.os.Bundle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import org.lineageos.settings.R;
-import org.lineageos.settings.corecontrol.CoreControlActivity;
 import org.lineageos.settings.fastcharge.FastChargeActivity;
-import org.lineageos.settings.zram.ZramActivity;
 
 public class KamisStuffFragment extends PreferenceFragment {
 
