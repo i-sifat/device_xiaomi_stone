@@ -81,4 +81,8 @@
     <string name="fastcharge_bypass_warning">Warning: Bypass charging may cause unstable power delivery in some cases. Use at your own risk!</string>
     <string name="fastcharge_bypass_unavailable">Bypass charging not supported on this device</string>
 
+    <!-- Kamis Stuff -->
+    <string name="kamis_stuff_title">Kamis Stuff</string>
+    <string name="kamis_stuff_summary">Bricking Time!</string>
+    
 </resources>
