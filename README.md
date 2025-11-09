@@ -25,4 +25,35 @@
 
 ![POCO X5 5G](https://i02.appmifile.com/131_operator_sg/10/01/2023/9fdae393cbadd8414135c33edd83e5e2.png "POCO X5 5G")
 # android_device_stone
-# android_device_stone
+# Commands For Building
+rm -rf out
+ccache -C
+
+⚙️ Halogen OS Build Steps
+
+🧩 1. Create Project Folder
+mkdir xossrc
+cd xossrc
+
+🌐 2. Initialize HalogenOS Repo
+repo init -u https://git.halogenos.org/halogenOS/android_manifest.git -b XOS-16.0 --depth=1
+
+🔄 3. Sync Source (Partial Sync for Essential Components)
+repo sync -j8 -c --no-tags --no-clone-bundle build/make external/xos product/halogenOS
+
+⚙️ 4. Source Environment Setup
+source build/envsetup.sh
+
+📦 5. Sync Remaining Repositories
+reposync
+
+
+🧰 7. Source Environment Again (to Refresh)
+source build/envsetup.sh
+
+🔑 8. Generate Missing Keys
+generateMissingKeys
+
+🏗️ 9. Start Full Build
+build full aosp_stone-bp2a-user | tee build-log.txt
+build full aosp_stone-bp2a-user noclean | tee build-log.txt
