@@ -12,16 +12,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device.
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from the Neoteric configuration.
+$(call inherit-product, vendor/neoteric/target/product/neoteric-target.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 TARGET_EXCLUDES_AUDIOFX := true
-
-include vendor/priv-keys/keys/keys.mk
 
 PRODUCT_BRAND := Redmi
 PRODUCT_DEVICE := stone
